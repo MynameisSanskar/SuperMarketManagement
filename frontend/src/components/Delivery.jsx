@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Map from "./map";
 
 function Delivery() {
-  const [pickupCoordinates, setPickupCoordinates] = useState(null);
+  const [loc, setLoc] = useState(null);
   const getPickupCoordinates = (pickup) => {
     fetch(
       `https://api.mapbox.com/geocoding/v5/mapbox.places/${pickup}.json?` +
@@ -19,15 +19,26 @@ function Delivery() {
     )
       .then((response) => response.json())
       .then((data) => {
-        setPickupCoordinates(data.features[0].center);
-        console.log(data.features[0].center);
+        setLoc({
+          coordinates: data.features[0].center,
+          title: data.features[0].place_name,
+          desc: "YOU ARE HERE",
+        });
+        console.log(data);
       });
   };
 
   useEffect(() => {
     getPickupCoordinates("Panvel");
   }, []);
-  return <Map pickupCoordinates={pickupCoordinates} />;
+  return (
+    <>
+      <div>Hello world</div>
+      <div className="m-3">
+        <Map loc={loc} />
+      </div>
+    </>
+  );
 }
 
 export default Delivery;

@@ -1,7 +1,8 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import mapboxgl from "mapbox-gl";
 /**  import "mapbox-gl/dist/mapbox-gl.css";
  * ! DO NOT UNCOMMENT, DOESNT LOAD THE MAP: no such file exists
+ * ! map ref also doesnt work
  *
  */
 
@@ -10,32 +11,45 @@ mapboxgl.accessToken =
 
 export const Map = (props) => {
   // const mapRef = useRef(null);
+  const [curr, setcurr] = useState([]);
+
   useEffect(() => {
-    const map = new mapboxgl.Map({
-      container: "map",
-      style: "mapbox://styles/drakosi/ckvcwq3rwdw4314o3i2ho8tph",
-      center: [20.59, 78.96],
-      zoom: 5,
+    navigator.geolocation.getCurrentPosition((position) => {
+      setcurr(position.coords);
     });
-    // map.addControl(new mapboxgl.NavigationControl(), "bottom-right");
+    if (props.loc && curr[0]) {
+      const map = new mapboxgl.Map({
+        container: "map",
+        // style: "mapbox://styles/drakosi/ckvcwq3rwdw4314o3i2ho8tph",
+        style: "mapbox://styles/examples/clg45vm7400c501pfubolb0xz",
+        center: props.loc.coordinates,
+        zoom: 11,
+      }).fitBounds(
+        [
+          [curr.longitude, curr.latitude],
+          [curr.longitude, curr.latitude],
+        ],
+        {
+          padding: { top: 10, bottom: 25, left: 15, right: 5 },
+        }
+      );
+      // map.addControl(new mapboxgl.NavigationControl(), "bottom-left");
 
-    // addToMap(map, props.pickupCoordinates);
-    // addToMap(map, props.pickupCoordinates);
-
-    if (props.pickupCoordinates) {
-      console.log(props.pickupCoordinates);
-      new mapboxgl.Marker().setLngLat(props.pickupCoordinates).addTo(map);
-      map.fitBounds([props.pickupCoordinates, props.pickupCoordinates], {
-        padding: 60,
-      });
+      new mapboxgl.Marker()
+        .setLngLat([curr.longitude, curr.latitude])
+        //   // .setPopup(
+        //   //   new mapboxgl.Popup({ offset: 25 }) // add popups
+        //   //     .setHTML(
+        //   //       `<h3>${props.loc.title || "title"}</h3><p>${
+        //   //         props.loc.desc || "desc"
+        //   //       }</p>`
+        //   //     )
+        //   // )
+        .addTo(map);
     }
-  }, [props.pickupCoordinates]);
+  }, [props.loc]);
 
-  const addToMap = (map, coordinates) => {
-    return new mapboxgl.Marker().setLngLat(coordinates).addTo(map);
-  };
-
-  return <div id="map"></div>;
+  return <div id="map" style={{ height: "500px" }}></div>;
 };
 
 export default Map;
