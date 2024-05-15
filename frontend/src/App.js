@@ -1,5 +1,5 @@
 import { useAuthContext } from './hooks/useAuthContext'
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, Navigate ,useNavigate} from 'react-router-dom'
 
 import { Button } from 'flowbite-react';
 import Login_new from './pages/Login_new';
@@ -9,19 +9,35 @@ import HomePage from './pages/HomePage';
  function App() {
   const { user } = useAuthContext()
   return (
-    <div>
-      <BrowserRouter>
-      <Routes>
-
-        <Route path='/login' element={<Login_new/>}></Route>
-
-        <Route path='/signup' element={<Signup_new/>}></Route>
-        <Route path='/homepage' element={<HomePage/>}></Route>
-            </Routes>
-      </BrowserRouter>
-
-    </div>
+    <BrowserRouter>
+    <Routes>
+            <Route 
+              path="/" 
+              element={user ? <HomePage /> : <Navigate to="/login" />} 
+            />
+            <Route 
+              path="/login" 
+              element={!user ? <Login_new /> : <Navigate to="/" />} 
+            />
+            <Route 
+              path="/signup" 
+              element={!user ? <Signup_new /> : <Navigate to="/" />} 
+            />
+          </Routes>
+    </BrowserRouter>
   );
-}
+};
+
+const LoginWrapper = () => {
+  const navigate = useNavigate();
+
+  const handleLogin = () => {
+    // Logic for handling login
+    // After successful login, navigate to homepage
+    navigate('/homepage');
+  };
+
+  return <Login_new onLogin={handleLogin} />;
+};
 
 export default App;

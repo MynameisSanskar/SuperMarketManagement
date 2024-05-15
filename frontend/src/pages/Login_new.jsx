@@ -5,11 +5,11 @@ import Signin_lottie from '../lottie/bg'
 import Lottie1 from '../lottie/Lottie1'
 
 
-const Login_new = () => {
+const Login_new = (props) => {
   const {login, error, isLoading} = useLogin()
    const [email,setEmail]=useState("");
    const [password,setPassword]=useState("");
-
+ 
 
    const handleSubmit =  (e) => {
     e.preventDefault();
