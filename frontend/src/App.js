@@ -7,6 +7,7 @@ import Signup_new from "./pages/Signup_new";
 import Payment from "./components/Payment";
 import HomePage from "./pages/HomePage";
 import Cart from "./components/Cart";
+import Delivery from "./components/Delivery";
 // import Request from './pages/Request'
 function App() {
   const { user } = useAuthContext();
@@ -17,6 +18,7 @@ function App() {
           <Route path="/login" element={<Login_new />}></Route>
           <Route path="/payment" element={<Payment />}></Route>
           <Route path="/cart" element={<Cart />}></Route>
+          <Route path="/delivery" element={<Delivery />}></Route>
 
           <Route path="/signup" element={<Signup_new />}></Route>
           <Route path="/homepage" element={<HomePage />}></Route>

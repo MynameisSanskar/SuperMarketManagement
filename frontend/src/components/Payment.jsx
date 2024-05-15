@@ -1,5 +1,4 @@
 import React from "react";
-import visa from "../../assets/images/visa.svg";
 
 function Payment() {
   return (
@@ -41,7 +40,7 @@ function Payment() {
                   className="flex flex-row items-center space-x-3"
                 >
                   <span>Debit/Credit Card</span>
-                  <img src={visa} alt="visa_image" />
+                  <img src="./visa.svg" alt="visa_image" />
                 </label>
               </div>
               <div className=" border-2 border-gray-500 rounded-xl p-2 flex flex-row items-center space-x-3">
