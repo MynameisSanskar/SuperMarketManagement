@@ -20,15 +20,14 @@ function Delivery() {
       .then((response) => response.json())
       .then((data) => {
         setPickupCoordinates(data.features[0].center);
+        console.log(data.features[0].center);
       });
   };
 
-  useEffect(() => {}, []);
-  return (
-    <div className="h-fit">
-      <Map pickupCoordinates={pickupCoordinates} />
-    </div>
-  );
+  useEffect(() => {
+    getPickupCoordinates("Panvel");
+  }, []);
+  return <Map pickupCoordinates={pickupCoordinates} />;
 }
 
 export default Delivery;
