@@ -29,12 +29,18 @@ function App() {
       <Routes>
         {/*      
         <Route path="/" element={<HomePage />} />
-        <Route path="/login" element={<Login_new />} />
-        <Route path="/signup" element={<Signup_new />} /> */}
         {/* <Route path="/payment" element={<Payment />} />
         <Route path="/cart" element={<Cart />} />
-        <Route path="/delivery" element={<Delivery />} /> */}
+      <Route path="/delivery" element={<Delivery />} /> */}
 
+        <Route
+          path="/login"
+          element={!user ? <Login_new /> : <Navigate to="/" />}
+        />
+        <Route
+          path="/signup"
+          element={!user ? <Signup_new /> : <Navigate to="/" />}
+        />
         <Route
           path="/project"
           element={user ? <Project /> : <Navigate to="/login" />}
