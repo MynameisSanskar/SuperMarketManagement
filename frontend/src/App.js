@@ -28,9 +28,6 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/payment" element={<Payment />} />
-        <Route path="/cart" element={<Cart />} />
-        <Route path="/delivery" element={<Delivery />} />
         {/* <Route
           path="/login"
           element={!user ? <Login_new /> : <Navigate to="/" />}
@@ -61,14 +58,17 @@ function App() {
           element={<PetCareEssentials />}
         />
         <Route path="/project/Beverages" element={<Beverages />} />
+        <Route path="/payment" element={<Payment />} />
+        <Route path="/cart" element={<Cart />} />
+        <Route path="/delivery" element={<Delivery />} />
         {/* <Route
           path="/payment"
           element={user ? <Payment /> : <Navigate to="/login" />}
-        />
-        <Route
+          />
+          <Route
           path="/cart"
           element={user ? <Cart /> : <Navigate to="/login" />}
-        />
+          />
         <Route
           path="/delivery"
           element={user ? <Delivery /> : <Navigate to="/login" />}

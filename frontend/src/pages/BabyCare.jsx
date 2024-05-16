@@ -7,11 +7,12 @@ import johnsons_baby_shampoo from "../assets/baby_care/johnsons_baby_shampoo.web
 import johnsons_baby_soap from "../assets/baby_care/johnsons_baby_soap.webp";
 import johnsons_baby_wipes from "../assets/baby_care/johnsons_baby_wipes.webp";
 import vicks_babyrub from "../assets/baby_care/vicks_babyrub.webp";
-import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../context/AuthContext";
+import { useNavigate } from "react-router-dom";
 
 const BabyCare = () => {
   const { addToOrder, orderItems } = useContext(AuthContext);
+  const navigate = useNavigate();
 
   console.log(orderItems);
   const initialQuantities = {
@@ -302,6 +303,13 @@ const BabyCare = () => {
           </div>
         </div>
       </div>
+      <button
+        onClick={() => {
+          navigate("/cart");
+        }}
+      >
+        To to cart
+      </button>
       <Footer />
     </div>
   );

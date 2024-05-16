@@ -3,6 +3,7 @@ import CancelOutlinedIcon from "@mui/icons-material/CancelOutlined";
 import AddCircleOutlineOutlinedIcon from "@mui/icons-material/AddCircleOutlineOutlined";
 import RemoveCircleOutlineOutlinedIcon from "@mui/icons-material/RemoveCircleOutlineOutlined";
 import { useNavigate } from "react-router-dom";
+import { AuthContext } from "../context/AuthContext";
 
 let items = [
   {
@@ -45,8 +46,8 @@ let items = [
 function Cart() {
   const [total, setTotal] = useState(0);
   const navigate = useNavigate();
-
-  // console.log(orderItems);
+  const { orderItems } = useContext(AuthContext);
+  console.log(orderItems);
   useEffect(() => {
     let amt = 0;
     items.map(({ price, count }) => {
