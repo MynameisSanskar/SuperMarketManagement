@@ -16,31 +16,31 @@ const Carousel = () => {
   };
 
   return (
-  <div class="flex justifiy-content">
+  <div class="flex content-between">
 <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 mt-2">
-<a href="/project/Beverages">
-    <img class="rounded-t-lg" src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1715101737_Refreshing_Summer.jpg?im=Resize=(768,448)" alt="product image" />
+<a href="/project/PetCareEssentials">
+    <img class="rounded-t-lg"style={{height:'221px',width:'383px'}}src="https://headsupfortails.com/cdn/shop/collections/strip_1.jpg?v=1701952156" alt="product image" />
 </a>
    
    
 </div>
 
 <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 mt-2">
-<a href="/project/BabyCare">
-    <img style={{height:'221px',width:'383px'}} class="rounded-t-lg max-w-30 max-h-30" src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/e24ab737316811.573c375a45bf8.jpg" alt="product image" />
+<a href="/project/FruitsAndVegetables">
+    <img style={{height:'221px',width:'383px'}} class="rounded-t-lg max-w-30 max-h-30" src="https://img.freepik.com/free-vector/hand-drawn-horizontal-sale-banner-template-world-vegetarian-day-event_23-2150800840.jpg?t=st=1715858022~exp=1715861622~hmac=2773c92490f6cd4e0452ee6b8f1259ff72cb15618024ebdc8c2dd35c8d74578d&w=1060" alt="product image" />
 </a>
    
 </div>
 
 <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 mt-2">
     <a href="/project/CleaningEssentials">
-        <img  style={{height:'221px',width:'383px'}} class=" rounded-t-lg" src={product1} alt="product image" />
+        <img  style={{height:'221px',width:'383px'}} class=" rounded-t-lg" src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1715103750_Assam_Jharkhand_-Sikkim_Westbengal.jpg?im=Resize=(768,448)" alt="product image" />
     </a>
    
 </div>
 <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 mt-2">
     <a href="/project/ApparelLifestyle">
-        <img style={{height:'221px',width:'383px'}} class=" rounded-t-lg" src="https://rukminim2.flixcart.com/fk-p-flap/520/280/image/22e305bf45e2e1a2.jpeg?q=20" alt="product image" />
+        <img style={{height:'221px',width:'383px'}} class=" rounded-t-lg" src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1715101815_Noodles.jpg?im=Resize=(768,448)" alt="product image" />
     </a>
    
 </div>

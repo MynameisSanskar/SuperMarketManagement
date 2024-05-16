@@ -31,12 +31,12 @@ function App() {
           element={user ? <HomePage /> : <Navigate to="/login" />}
         />
         <Route
-          path="/login"
-          element={!user ? <Login_new /> : <Navigate to="/" />}
-        />
-        <Route
           path="/signup"
           element={!user ? <Signup_new /> : <Navigate to="/" />}
+        />
+        <Route
+          path="/login"
+          element={!user ? <Login_new /> : <Navigate to="/" />}
         />
         {/* Add a Route for Project.jsx */}
         <Route
@@ -45,27 +45,27 @@ function App() {
         />
         <Route
           path="/project/FruitsAndVegetables"
-          element={user ? <FruitsAndVegetables /> : <Navigate to="/login" />}
+          element={ <FruitsAndVegetables /> }
         />
         <Route
           path="/project/ApparelLifestyle"
-          element={user ? <ApparelLifestyle /> : <Navigate to="/login" />}
+          element={ <ApparelLifestyle /> }
         />
         <Route
           path="/project/CleaningEssentials"
-          element={user ? <CleaningEssentials /> : <Navigate to="/login" />}
+          element={ <CleaningEssentials /> }
         />
         <Route
           path="/project/BabyCare"
-          element={user ? <BabyCare /> : <Navigate to="/login" />}
+          element={ <BabyCare /> }
         />
         <Route
           path="/project/PetCareEssentials"
-          element={user ? <PetCareEssentials /> : <Navigate to="/login" />}
+          element={ <PetCareEssentials /> }
         />
         <Route
           path="/project/Beverages"
-          element={user ? <Beverages /> : <Navigate to="/login" />}
+          element={ <Beverages /> }
         />
         <Route
           path="/payment"
