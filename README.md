@@ -1,2 +1,1 @@
-# webgenius
-VJTI hack
+Lab Project
