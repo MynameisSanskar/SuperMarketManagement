@@ -27,32 +27,14 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        {/* <Route
-          path="/"
-          element={user ? <HomePage /> : <Navigate to="/login" />}
-        />
-        <Route
-        /> */}
-        {/* <Route
-          path="/login"
-          element={!user ? <Login_new /> : <Navigate to="/" />}
-        /> */}
+        {/*      
         <Route path="/" element={<HomePage />} />
         <Route path="/login" element={<Login_new />} />
-        <Route path="/signup" element={<Signup_new />} />
-        <Route path="/payment" element={<Payment />} />
+        <Route path="/signup" element={<Signup_new />} /> */}
+        {/* <Route path="/payment" element={<Payment />} />
         <Route path="/cart" element={<Cart />} />
-        <Route path="/delivery" element={<Delivery />} />
+        <Route path="/delivery" element={<Delivery />} /> */}
 
-        {/* <Route
-          path="/signup"
-          element={!user ? <Signup_new /> : <Navigate to="/" />}
-        />
-        <Route
-          path="/login"
-          element={!user ? <Login_new /> : <Navigate to="/" />}
-        />
-        {/* Add a Route for Project.jsx */}
         <Route
           path="/project"
           element={user ? <Project /> : <Navigate to="/login" />}
@@ -75,14 +57,18 @@ function App() {
           element={<PetCareEssentials />}
         />
         <Route path="/project/Beverages" element={<Beverages />} />
-        {/* <Route
+        <Route
           path="/payment"
           element={user ? <Payment /> : <Navigate to="/login" />}
         />
         <Route
           path="/cart"
           element={user ? <Cart /> : <Navigate to="/login" />}
-        /> */}
+        />
+        <Route
+          path="/delivery"
+          element={user ? <Delivery /> : <Navigate to="/login" />}
+        />
       </Routes>
     </BrowserRouter>
   );
