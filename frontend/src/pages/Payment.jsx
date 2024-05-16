@@ -1,6 +1,8 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 function Payment() {
+  const navigate = useNavigate();
   return (
     <>
       <div className="flex flex-row p-10 space-x-3">
@@ -85,7 +87,10 @@ function Payment() {
               />
             </div>
           </div>
-          <div className=" w-3/5 rounded-full  bg-emerald-400 text-center font-bold text-white hover:cursor-pointer hover:bg-green-400 p-3 ">
+          <div
+            onClick={() => navigate("/delivery")}
+            className=" w-3/5 rounded-full  bg-emerald-400 text-center font-bold text-white hover:cursor-pointer hover:bg-green-400 p-3 "
+          >
             Confirm Payment
           </div>
         </div>
