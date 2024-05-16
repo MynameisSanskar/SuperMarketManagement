@@ -1,0 +1,39 @@
+[
+    {
+      "id": "bisleri-jar",
+      "name": "Bisleri Jar",
+      "price": 199,
+      "image": "../assets/beverages/bisleri_jar.webp"
+    },
+    {
+      "id": "hershey-milk-shake",
+      "name": "Hershey Milk Shake",
+      "price": 249,
+      "image": "../assets/beverages/hershey_milk_shake.webp"
+    },
+    {
+      "id": "raw-mango-drink",
+      "name": "Raw Mango Drink",
+      "price": 199,
+      "image": "../assets/beverages/raw_mango_drink.webp"
+    },
+    {
+      "id": "red-bull",
+      "name": "Red Bull",
+      "price": 299,
+      "image": "../assets/beverages/red_bull.webp"
+    },
+    {
+      "id": "rooh-afza",
+      "name": "Rooh Afza",
+      "price": 349,
+      "image": "../assets/beverages/rooh_afza.webp"
+    },
+    {
+      "id": "sprite",
+      "name": "Sprite",
+      "price": 199,
+      "image": "../assets/beverages/sprite.webp"
+    }
+  ]
+  

@@ -1,0 +1,46 @@
+{
+    "products": [
+        {
+            "id": "calcium-bone-dog-treats",
+            "name": "Calcium Bone Dog Treats",
+            "price": 599,
+            "image": "../assets/pet_care/calcium_bone_dog_treats.webp",
+            "category": "dog"
+        },
+        {
+            "id": "donut-chew-toy",
+            "name": "Donut Chew Toy",
+            "price": 349,
+            "image": "../assets/pet_care/donut_chew_toy.webp",
+            "category": "dog"
+        },
+        {
+            "id": "leather-training-leash",
+            "name": "Leather Training Leash",
+            "price": 499,
+            "image": "../assets/pet_care/leather_training_leash.webp",
+            "category": "dog"
+        },
+        {
+            "id": "nootie-flea-comb",
+            "name": "Nootie Flea Comb",
+            "price": 399,
+            "image": "../assets/pet_care/nootie_flea_comb.webp",
+            "category": "dog"
+        },
+        {
+            "id": "pedigree-dog-food",
+            "name": "Pedigree Dog Food",
+            "price": 399,
+            "image": "../assets/pet_care/pedigree_dog_food.webp",
+            "category": "dog"
+        },
+        {
+            "id": "whiskas-cat-food",
+            "name": "Whiskas Cat Food",
+            "price": 249,
+            "image": "../assets/pet_care/whiskas_cat_food.webp",
+            "category": "cat"
+        }
+    ]
+}

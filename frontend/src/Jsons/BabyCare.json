@@ -1,0 +1,39 @@
+[
+    {
+      "id": "cerelacBabyFood",
+      "name": "Cerelac Baby Food",
+      "price": 599,
+      "image": "../assets/baby_care/cerelac_baby_food.webp"
+    },
+    {
+      "id": "himalayaBabyLotion",
+      "name": "Himalaya Baby Lotion",
+      "price": 349,
+      "image": "../assets/baby_care/himalaya_baby_lotion.webp"
+    },
+    {
+      "id": "johnsonsBabyShampoo",
+      "name": "Johnson's Baby Shampoo",
+      "price": 499,
+      "image": "../assets/baby_care/johnsons_baby_shampoo.webp"
+    },
+    {
+      "id": "johnsonsBabySoap",
+      "name": "Johnson's Baby Soap",
+      "price": 399,
+      "image": "../assets/baby_care/johnsons_baby_soap.webp"
+    },
+    {
+      "id": "johnsonsBabyWipes",
+      "name": "Johnson's Baby Wipes",
+      "price": 399,
+      "image": "../assets/baby_care/johnsons_baby_wipes.webp"
+    },
+    {
+      "id": "vicksBabyRub",
+      "name": "Vicks BabyRub",
+      "price": 249,
+      "image": "../assets/baby_care/vicks_babyrub.webp"
+    }
+  ]
+  

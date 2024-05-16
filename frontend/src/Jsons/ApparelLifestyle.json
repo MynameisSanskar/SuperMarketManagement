@@ -1,0 +1,39 @@
+[
+    {
+      "id": "bag",
+      "name": "Bag",
+      "price": 3999,
+      "image": "../assets/apparel_lifestyle/bag.webp"
+    },
+    {
+      "id": "bedsheet",
+      "name": "Bedsheet",
+      "price": 5999,
+      "image": "../assets/apparel_lifestyle/bedsheet.webp"
+    },
+    {
+      "id": "handkerchief",
+      "name": "Handkerchief",
+      "price": 999,
+      "image": "../assets/apparel_lifestyle/handkerchief.webp"
+    },
+    {
+      "id": "sunglasses-1",
+      "name": "Sunglasses 1",
+      "price": 2999,
+      "image": "../assets/apparel_lifestyle/sunglasses_1.webp"
+    },
+    {
+      "id": "t-shirt",
+      "name": "T-Shirt",
+      "price": 1999,
+      "image": "../assets/apparel_lifestyle/t_shirt.webp"
+    },
+    {
+      "id": "sunglasses-2",
+      "name": "Sunglasses 2",
+      "price": 3499,
+      "image": "../assets/apparel_lifestyle/sunglasses_2.webp"
+    }
+  ]
+  

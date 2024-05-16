@@ -1,0 +1,46 @@
+{
+    "products": [
+        {
+            "id": "lady-finger",
+            "name": "Lady Finger",
+            "price": 49,
+            "image": "../assets/fruits_vegetables/lady_finger.webp",
+            "category": "vegetables"
+        },
+        {
+            "id": "litchi",
+            "name": "Litchi",
+            "price": 399,
+            "image": "../assets/fruits_vegetables/litchi.webp",
+            "category": "fruits"
+        },
+        {
+            "id": "cabbage",
+            "name": "Cabbage",
+            "price": 149,
+            "image": "../assets/fruits_vegetables/cabbage.webp",
+            "category": "vegetables"
+        },
+        {
+            "id": "apple",
+            "name": "Apple",
+            "price": 299,
+            "image": "../assets/fruits_vegetables/apple.webp",
+            "category": "fruits"
+        },
+        {
+            "id": "mango",
+            "name": "Mango",
+            "price": 199,
+            "image": "../assets/fruits_vegetables/mango.webp",
+            "category": "fruits"
+        },
+        {
+            "id": "onion",
+            "name": "Onion",
+            "price": 49,
+            "image": "../assets/fruits_vegetables/onion.webp",
+            "category": "vegetables"
+        }
+    ]
+}

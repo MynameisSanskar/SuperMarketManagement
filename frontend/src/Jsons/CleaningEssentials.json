@@ -1,0 +1,39 @@
+[
+    {
+      "id": "ariel-detergent",
+      "name": "Ariel Detergent",
+      "price": 599,
+      "image": "../assets/cleaning_essentials/ariel_detergent.webp"
+    },
+    {
+      "id": "godrej-aer-room-freshner",
+      "name": "Godrej Aer Room Freshener",
+      "price": 349,
+      "image": "../assets/cleaning_essentials/godrej_aer_room_freshner.jpg"
+    },
+    {
+      "id": "lizol-floor-cleaner",
+      "name": "Lizol Floor Cleaner",
+      "price": 499,
+      "image": "../assets/cleaning_essentials/lizol_floor_cleaner.webp"
+    },
+    {
+      "id": "mortein-mosquito-repellent",
+      "name": "Mortein Mosquito Repellent",
+      "price": 399,
+      "image": "../assets/cleaning_essentials/mortein_mosquito_repellent.webp"
+    },
+    {
+      "id": "surf-excel",
+      "name": "Surf Excel",
+      "price": 399,
+      "image": "../assets/cleaning_essentials/surf_excel.webp"
+    },
+    {
+      "id": "vim-dishwash-gel",
+      "name": "Vim Dishwash Gel",
+      "price": 249,
+      "image": "../assets/cleaning_essentials/vim_dishwash_gel.webp"
+    }
+  ]
+  
