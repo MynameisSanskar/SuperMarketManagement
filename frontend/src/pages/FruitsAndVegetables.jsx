@@ -1,16 +1,18 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import ladyFinger from "../assets/fruits_vegetables/lady_finger.webp";
 import apple from "../assets/fruits_vegetables/apple.webp";
 import cabbage from "../assets/fruits_vegetables/cabbage.webp";
 import litchi from "../assets/fruits_vegetables/litchi.webp";
 import mango from "../assets/fruits_vegetables/mango.webp";
 import onion from "../assets/fruits_vegetables/onion.webp";
+import { AuthContext } from "../context/AuthContext";
 
 const FruitsAndVegetables = () => {
-  const navigate = useNavigate();
+  const { addToOrder, orderItems } = useContext(AuthContext);
+  console.log(orderItems);
   const [quantities, setQuantities] = useState({
     "quantity-lady-finger": 0,
     "quantity-litchi": 0,
@@ -77,7 +79,11 @@ const FruitsAndVegetables = () => {
                   to="/cart"
                   className="px-4 py-1 bg-green-500 text-white"
                   onClick={() => {
-                    navigate("/cart");
+                    addToOrder(
+                      "FruitsAndVegetables",
+                      1,
+                      quantities["quantity-lady-finger"]
+                    );
                   }}
                 >
                   Add to Cart
@@ -118,7 +124,11 @@ const FruitsAndVegetables = () => {
                 <button
                   className="px-4 py-1 bg-green-500 text-white"
                   onClick={() => {
-                    navigate("/cart");
+                    addToOrder(
+                      "FruitsAndVegetables",
+                      2,
+                      quantities["quantity-litchi"]
+                    );
                   }}
                 >
                   Add to Cart
@@ -159,7 +169,11 @@ const FruitsAndVegetables = () => {
                 <button
                   className="px-4 py-1 bg-green-500 text-white"
                   onClick={() => {
-                    navigate("/cart");
+                    addToOrder(
+                      "FruitsAndVegetables",
+                      3,
+                      quantities["quantity-cabbage"]
+                    );
                   }}
                 >
                   Add to Cart
@@ -200,7 +214,11 @@ const FruitsAndVegetables = () => {
                 <button
                   className="px-4 py-1 bg-green-500 text-white"
                   onClick={() => {
-                    navigate("/cart");
+                    addToOrder(
+                      "FruitsAndVegetables",
+                      4,
+                      quantities["quantity-apple"]
+                    );
                   }}
                 >
                   Add to Cart
@@ -241,7 +259,11 @@ const FruitsAndVegetables = () => {
                 <button
                   className="px-4 py-1 bg-green-500 text-white"
                   onClick={() => {
-                    navigate("/cart");
+                    addToOrder(
+                      "FruitsAndVegetables",
+                      5,
+                      quantities["quantity-mango"]
+                    );
                   }}
                 >
                   Add to Cart
@@ -282,7 +304,11 @@ const FruitsAndVegetables = () => {
                 <button
                   className="px-4 py-1 bg-green-500 text-white"
                   onClick={() => {
-                    navigate("/cart");
+                    addToOrder(
+                      "FruitsAndVegetables",
+                      6,
+                      quantities["quantity-onion"]
+                    );
                   }}
                 >
                   Add to Cart

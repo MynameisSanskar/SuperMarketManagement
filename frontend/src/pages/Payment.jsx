@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 
 function Payment() {
   const navigate = useNavigate();
+
   return (
     <>
       <div className="flex flex-row p-10 space-x-3">

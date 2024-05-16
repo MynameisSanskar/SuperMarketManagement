@@ -27,20 +27,18 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        {/*      
         <Route path="/" element={<HomePage />} />
-        {/* <Route path="/payment" element={<Payment />} />
+        <Route path="/payment" element={<Payment />} />
         <Route path="/cart" element={<Cart />} />
-      <Route path="/delivery" element={<Delivery />} /> */}
-
-        <Route
+        <Route path="/delivery" element={<Delivery />} />
+        {/* <Route
           path="/login"
           element={!user ? <Login_new /> : <Navigate to="/" />}
         />
         <Route
           path="/signup"
           element={!user ? <Signup_new /> : <Navigate to="/" />}
-        />
+        /> */}
         <Route
           path="/project"
           element={user ? <Project /> : <Navigate to="/login" />}
@@ -63,7 +61,7 @@ function App() {
           element={<PetCareEssentials />}
         />
         <Route path="/project/Beverages" element={<Beverages />} />
-        <Route
+        {/* <Route
           path="/payment"
           element={user ? <Payment /> : <Navigate to="/login" />}
         />
@@ -74,7 +72,7 @@ function App() {
         <Route
           path="/delivery"
           element={user ? <Delivery /> : <Navigate to="/login" />}
-        />
+        /> */}
       </Routes>
     </BrowserRouter>
   );

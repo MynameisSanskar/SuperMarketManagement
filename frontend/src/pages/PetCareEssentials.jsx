@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import calcium_bone_dog_treats from "../assets/pet_care/calcium_bone_dog_treats.webp";
@@ -7,10 +7,11 @@ import leather_training_leash from "../assets/pet_care/leather_training_leash.we
 import nootie_flea_comb from "../assets/pet_care/nootie_flea_comb.webp";
 import pedigree_dog_food from "../assets/pet_care/pedigree_dog_food.webp";
 import whiskas_cat_food from "../assets/pet_care/whiskas_cat_food.webp";
-import { useNavigate } from "react-router-dom";
+import { AuthContext } from "../context/AuthContext";
 
 const PetCareEssentials = () => {
-  const navigate = useNavigate();
+  const { addToOrder, orderItems } = useContext(AuthContext);
+  console.log(orderItems);
   const [quantities, setQuantities] = useState({
     "quantity-calcium-bone-dog-treats": 0,
     "quantity-donut-chew-toy": 0,
@@ -79,7 +80,11 @@ const PetCareEssentials = () => {
                 <button
                   className="px-4 py-1 bg-green-500 text-white"
                   onClick={() => {
-                    navigate("/cart");
+                    addToOrder(
+                      "PetCare",
+                      1,
+                      quantities["quantity-calcium-bone-dog-treats"]
+                    );
                   }}
                 >
                   Add to Cart
@@ -120,7 +125,11 @@ const PetCareEssentials = () => {
                 <button
                   className="px-4 py-1 bg-green-500 text-white"
                   onClick={() => {
-                    navigate("/cart");
+                    addToOrder(
+                      "PetCare",
+                      2,
+                      quantities["quantity-donut-chew-toy"]
+                    );
                   }}
                 >
                   Add to Cart
@@ -165,7 +174,11 @@ const PetCareEssentials = () => {
                 <button
                   className="px-4 py-1 bg-green-500 text-white"
                   onClick={() => {
-                    navigate("/cart");
+                    addToOrder(
+                      "PetCare",
+                      3,
+                      quantities["quantity-leather-training-leash"]
+                    );
                   }}
                 >
                   Add to Cart
@@ -210,7 +223,11 @@ const PetCareEssentials = () => {
                 <button
                   className="px-4 py-1 bg-green-500 text-white"
                   onClick={() => {
-                    navigate("/cart");
+                    addToOrder(
+                      "PetCare",
+                      4,
+                      quantities["quantity-nootie-flea-comb"]
+                    );
                   }}
                 >
                   Add to Cart
@@ -255,7 +272,11 @@ const PetCareEssentials = () => {
                 <button
                   className="px-4 py-1 bg-green-500 text-white"
                   onClick={() => {
-                    navigate("/cart");
+                    addToOrder(
+                      "PetCare",
+                      5,
+                      quantities["quantity-pedigree-dog-food"]
+                    );
                   }}
                 >
                   Add to Cart
@@ -300,7 +321,11 @@ const PetCareEssentials = () => {
                 <button
                   className="px-4 py-1 bg-green-500 text-white"
                   onClick={() => {
-                    navigate("/cart");
+                    addToOrder(
+                      "PetCare",
+                      6,
+                      quantities["quantity-whiskas-cat-food"]
+                    );
                   }}
                 >
                   Add to Cart

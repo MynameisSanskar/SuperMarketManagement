@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import bag from "../assets/apparel_lifestyle/bag.webp";
@@ -7,43 +7,43 @@ import handkerchief from "../assets/apparel_lifestyle/handkerchief.webp";
 import sunglasses_1 from "../assets/apparel_lifestyle/sunglasses_1.webp";
 import sunglasses_2 from "../assets/apparel_lifestyle/sunglasses_2.webp";
 import t_shirt from "../assets/apparel_lifestyle/t_shirt.webp";
-import { useNavigate } from "react-router-dom";
+import { AuthContext } from "../context/AuthContext";
 
 const ApparelLifestyle = () => {
-  const navigate = useNavigate();
+  const { addToOrder } = useContext(AuthContext);
   const products = [
     {
-      id: "bag",
+      id: "1",
       name: "Bag",
       price: 3999,
       image: bag,
     },
     {
-      id: "bedsheet",
+      id: "2",
       name: "Bedsheet",
       price: 5999,
       image: bedsheet,
     },
     {
-      id: "handkerchief",
+      id: "3",
       name: "Handkerchief",
       price: 999,
       image: handkerchief,
     },
     {
-      id: "sunglasses-1",
+      id: "4",
       name: "Sunglasses 1",
       price: 2999,
       image: sunglasses_1,
     },
     {
-      id: "t-shirt",
+      id: "5",
       name: "T-Shirt",
       price: 1999,
       image: t_shirt,
     },
     {
-      id: "sunglasses-2",
+      id: "6",
       name: "Sunglasses 2",
       price: 3499,
       image: sunglasses_2,
@@ -113,7 +113,11 @@ const ApparelLifestyle = () => {
                   <button
                     className="px-4 py-1 bg-green-500 text-white"
                     onClick={() => {
-                      navigate("/cart");
+                      addToOrder(
+                        "ApparelLifestyle",
+                        product.id,
+                        quantities[product.id]
+                      );
                     }}
                   >
                     Add to Cart

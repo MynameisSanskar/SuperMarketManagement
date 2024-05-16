@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import bisleri_jar from "../assets/beverages/bisleri_jar.webp";
@@ -8,9 +8,11 @@ import red_bull from "../assets/beverages/red_bull.webp";
 import rooh_afza from "../assets/beverages/rooh_afza.webp";
 import sprite from "../assets/beverages/sprite.webp";
 import { useNavigate } from "react-router-dom";
+import { AuthContext } from "../context/AuthContext";
 
 const Beverages = () => {
-  const navigate = useNavigate();
+  const { addToOrder, orderItems } = useContext(AuthContext);
+  console.log(orderItems);
   const [quantities, setQuantities] = useState({
     "quantity-bisleri-jar": 0,
     "quantity-hershey-milk-shake": 0,
@@ -78,7 +80,11 @@ const Beverages = () => {
                 <button
                   className="px-4 py-1 bg-green-500 text-white"
                   onClick={() => {
-                    navigate("/cart");
+                    addToOrder(
+                      "Beverages",
+                      1,
+                      quantities["quantity-bisleri-jar"]
+                    );
                   }}
                 >
                   Add to Cart
@@ -127,7 +133,11 @@ const Beverages = () => {
                 <button
                   className="px-4 py-1 bg-green-500 text-white"
                   onClick={() => {
-                    navigate("/cart");
+                    addToOrder(
+                      "Beverages",
+                      2,
+                      quantities["quantity-hershey-milk-shake"]
+                    );
                   }}
                 >
                   Add to Cart
@@ -176,7 +186,11 @@ const Beverages = () => {
                 <button
                   className="px-4 py-1 bg-green-500 text-white"
                   onClick={() => {
-                    navigate("/cart");
+                    addToOrder(
+                      "Beverages",
+                      3,
+                      quantities["quantity-raw-mango-drink"]
+                    );
                   }}
                 >
                   Add to Cart
@@ -221,7 +235,7 @@ const Beverages = () => {
                 <button
                   className="px-4 py-1 bg-green-500 text-white"
                   onClick={() => {
-                    navigate("/cart");
+                    addToOrder("Beverages", 4, quantities["quantity-red-bull"]);
                   }}
                 >
                   Add to Cart
@@ -266,7 +280,11 @@ const Beverages = () => {
                 <button
                   className="px-4 py-1 bg-green-500 text-white"
                   onClick={() => {
-                    navigate("/cart");
+                    addToOrder(
+                      "Beverages",
+                      5,
+                      quantities["quantity-rooh-afza"]
+                    );
                   }}
                 >
                   Add to Cart
@@ -308,7 +326,7 @@ const Beverages = () => {
                 <button
                   className="px-4 py-1 bg-green-500 text-white"
                   onClick={() => {
-                    navigate("/cart");
+                    addToOrder("Beverages", 6, quantities["quantity-sprite"]);
                   }}
                 >
                   Add to Cart

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import cerelac_baby_food from "../assets/baby_care/cerelac_baby_food.webp";
@@ -8,9 +8,12 @@ import johnsons_baby_soap from "../assets/baby_care/johnsons_baby_soap.webp";
 import johnsons_baby_wipes from "../assets/baby_care/johnsons_baby_wipes.webp";
 import vicks_babyrub from "../assets/baby_care/vicks_babyrub.webp";
 import { useNavigate } from "react-router-dom";
+import { AuthContext } from "../context/AuthContext";
 
 const BabyCare = () => {
-  const navigate = useNavigate();
+  const { addToOrder, orderItems } = useContext(AuthContext);
+
+  console.log(orderItems);
   const initialQuantities = {
     cerelacBabyFood: 0,
     himalayaBabyLotion: 0,
@@ -75,7 +78,7 @@ const BabyCare = () => {
                 <button
                   className="px-4 py-1 bg-green-500 text-white"
                   onClick={() => {
-                    navigate("/cart");
+                    addToOrder("BabyCare", 1, quantities["cerelacBabyFood"]);
                   }}
                 >
                   Add to Cart
@@ -117,7 +120,7 @@ const BabyCare = () => {
                 <button
                   className="px-4 py-1 bg-green-500 text-white"
                   onClick={() => {
-                    navigate("/cart");
+                    addToOrder("BabyCare", 2, quantities["himalayaBabyLotion"]);
                   }}
                 >
                   Add to Cart
@@ -159,7 +162,11 @@ const BabyCare = () => {
                 <button
                   className="px-4 py-1 bg-green-500 text-white"
                   onClick={() => {
-                    navigate("/cart");
+                    addToOrder(
+                      "BabyCare",
+                      3,
+                      quantities["johnsonsBabyShampoo"]
+                    );
                   }}
                 >
                   Add to Cart
@@ -201,7 +208,7 @@ const BabyCare = () => {
                 <button
                   className="px-4 py-1 bg-green-500 text-white"
                   onClick={() => {
-                    navigate("/cart");
+                    addToOrder("BabyCare", 4, quantities["johnsonsBabySoap"]);
                   }}
                 >
                   Add to Cart
@@ -243,7 +250,7 @@ const BabyCare = () => {
                 <button
                   className="px-4 py-1 bg-green-500 text-white"
                   onClick={() => {
-                    navigate("/cart");
+                    addToOrder("BabyCare", 5, quantities["johnsonsBabyWipes"]);
                   }}
                 >
                   Add to Cart
@@ -285,7 +292,7 @@ const BabyCare = () => {
                 <button
                   className="px-4 py-1 bg-green-500 text-white"
                   onClick={() => {
-                    navigate("/cart");
+                    addToOrder("BabyCare", 6, quantities["vicksBabyRub"]);
                   }}
                 >
                   Add to Cart

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import CancelOutlinedIcon from "@mui/icons-material/CancelOutlined";
 import AddCircleOutlineOutlinedIcon from "@mui/icons-material/AddCircleOutlineOutlined";
 import RemoveCircleOutlineOutlinedIcon from "@mui/icons-material/RemoveCircleOutlineOutlined";
@@ -45,6 +45,8 @@ let items = [
 function Cart() {
   const [total, setTotal] = useState(0);
   const navigate = useNavigate();
+
+  // console.log(orderItems);
   useEffect(() => {
     let amt = 0;
     items.map(({ price, count }) => {

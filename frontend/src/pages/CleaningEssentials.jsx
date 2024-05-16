@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import ariel_detergent from "../assets/cleaning_essentials/ariel_detergent.webp";
@@ -7,10 +7,11 @@ import lizol_floor_cleaner from "../assets/cleaning_essentials/lizol_floor_clean
 import mortein_mosquito_repellent from "../assets/cleaning_essentials/mortein_mosquito_repellent.webp";
 import surf_excel from "../assets/cleaning_essentials/surf_excel.webp";
 import vim_dishwash_gel from "../assets/cleaning_essentials/vim_dishwash_gel.webp";
-import { useNavigate } from "react-router-dom";
+import { AuthContext } from "../context/AuthContext";
 
 const CleaningEssentials = () => {
-  const navigate = useNavigate();
+  const { addToOrder, orderItems } = useContext(AuthContext);
+  console.log(orderItems);
   const [quantities, setQuantities] = useState({
     "quantity-ariel-detergent": 0,
     "quantity-godrej-aer-room-freshner": 0,
@@ -80,7 +81,11 @@ const CleaningEssentials = () => {
                 <button
                   className="px-4 py-1 bg-green-500 text-white"
                   onClick={() => {
-                    navigate("/cart");
+                    addToOrder(
+                      "CleaningEssentials",
+                      2,
+                      quantities["quantity-godrej-aer-room-freshner"]
+                    );
                   }}
                 >
                   Add to Cart
@@ -126,7 +131,11 @@ const CleaningEssentials = () => {
                 <button
                   className="px-4 py-1 bg-green-500 text-white"
                   onClick={() => {
-                    navigate("/cart");
+                    addToOrder(
+                      "CleaningEssentials",
+                      1,
+                      quantities["quantity-ariel-detergent"]
+                    );
                   }}
                 >
                   Add to Cart
@@ -171,7 +180,11 @@ const CleaningEssentials = () => {
                 <button
                   className="px-4 py-1 bg-green-500 text-white"
                   onClick={() => {
-                    navigate("/cart");
+                    addToOrder(
+                      "CleaningEssentials",
+                      3,
+                      quantities["quantity-lizol-floor-cleaner"]
+                    );
                   }}
                 >
                   Add to Cart
@@ -218,7 +231,11 @@ const CleaningEssentials = () => {
                 <button
                   className="px-4 py-1 bg-green-500 text-white"
                   onClick={() => {
-                    navigate("/cart");
+                    addToOrder(
+                      "CleaningEssentials",
+                      4,
+                      quantities["quantity-mortein-mosquito-repellent"]
+                    );
                   }}
                 >
                   Add to Cart
@@ -259,7 +276,11 @@ const CleaningEssentials = () => {
                 <button
                   className="px-4 py-1 bg-green-500 text-white"
                   onClick={() => {
-                    navigate("/cart");
+                    addToOrder(
+                      "CleaningEssentials",
+                      5,
+                      quantities["quantity-surf-excel"]
+                    );
                   }}
                 >
                   Add to Cart
@@ -304,7 +325,11 @@ const CleaningEssentials = () => {
                 <button
                   className="px-4 py-1 bg-green-500 text-white"
                   onClick={() => {
-                    navigate("/cart");
+                    addToOrder(
+                      "CleaningEssentials",
+                      6,
+                      quantities["quantity-vim-dishwash-gel"]
+                    );
                   }}
                 >
                   Add to Cart
