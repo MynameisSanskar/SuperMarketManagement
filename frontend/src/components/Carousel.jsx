@@ -19,10 +19,10 @@ const Carousel = () => {
     <div className="relative w-full" data-carousel="slide">
       <div className="relative h-56 overflow-hidden rounded-lg md:h-60">
         <div className="duration-700 ease-in-out" data-carousel-item style={{ display: currentSlide === 0 ? 'block' : 'none' }}>
-          <img src="https://rukminim2.flixcart.com/fk-p-flap/1600/270/image/5483df11b3fc9f0b.jpg?q=20" className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="Slide 1" />
+          <img src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1715790650_RestOfState_-_web.jpg?im=Resize=(2368,400)" className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="Slide 1" />
         </div>
         <div className="duration-700 ease-in-out" data-carousel-item style={{ display: currentSlide === 1 ? 'block' : 'none' }}>
-          <img src="https://rukminim2.flixcart.com/fk-p-flap/1600/270/image/4227babcdcb113c8.jpg?q=20" className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="Slide 2" />
+          <img src="https://www.jiomart.com/images/cms/aw_rbslider/slides/1713352523_unbelievableprices.jpg?im=Resize=(2368,400)" className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="Slide 2" />
         </div>
         <div className="duration-700 ease-in-out" data-carousel-item style={{ display: currentSlide === 2 ? 'block' : 'none' }}>
           <img src="https://rukminim2.flixcart.com/fk-p-flap/1600/270/image/b5ec95451c4f8705.jpg?q=20" className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="Slide 2" />
