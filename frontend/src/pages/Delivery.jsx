@@ -38,15 +38,17 @@ function Delivery() {
   }, []);
   return (
     <>
-      {/* <div className="m-3"> */}
-      <Map loc={loc} />
-      {/* </div> */}
-      <div className=" text-2xl text-red-500 font-bold m-10">
-        Your ORDER IS ON THE WAY
+      <div className="m-3">
+        <Map loc={loc} />
       </div>
-      <div className="flex flex-row">
-        <FaPhone />
-        Call us
+      <div className="flex flex-col items-center">
+        <div className=" text-3xl text-red-600 font-bold m-10">
+          Your ORDER IS ON THE WAY
+        </div>
+        <div className="flex flex-row gap-3 text-xl hover:underline hover:cursor-pointer">
+          <FaPhone />
+          Call us
+        </div>
       </div>
     </>
   );

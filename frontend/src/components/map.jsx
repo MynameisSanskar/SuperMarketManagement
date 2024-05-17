@@ -38,7 +38,7 @@ export const Map = (props) => {
           padding: { top: 10, bottom: 25, left: 15, right: 5 },
         }
       );
-      map.addControl(new mapboxgl.NavigationControl(), "bottom-left");
+      // map.addControl(new mapboxgl.NavigationControl(), "bottom-left");
 
       // new mapboxgl.Marker()
       //     // .setLngLat([curr.longitude, curr.latitude])
