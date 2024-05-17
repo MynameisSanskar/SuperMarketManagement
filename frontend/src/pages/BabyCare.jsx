@@ -54,6 +54,7 @@ const BabyCare = () => {
               src={cerelac_baby_food}
               alt="Cerelac Baby Food"
               className="w-full h-45 object-cover rounded-t-lg"
+              style={{height:'500px'}}
             />
             <div className="p-4">
               <h2 className="text-lg font-semibold">Cerelac Baby Food</h2>
@@ -100,6 +101,7 @@ const BabyCare = () => {
               src={himalaya_baby_lotion}
               alt="Himalaya Baby Lotion"
               className="w-full h-45 object-cover rounded-t-lg"
+              style={{height:'500px'}}
             />
             <div className="p-4">
               <h2 className="text-lg font-semibold">Himalaya Baby Lotion</h2>
@@ -146,6 +148,7 @@ const BabyCare = () => {
               src={johnsons_baby_shampoo}
               alt="Johnson's Baby Shampoo"
               className="w-full h-45 object-cover rounded-t-lg"
+              style={{height:'500px'}}
             />
             <div className="p-4">
               <h2 className="text-lg font-semibold">Johnson's Baby Shampoo</h2>
@@ -192,6 +195,7 @@ const BabyCare = () => {
               src={johnsons_baby_soap}
               alt="Johnson's Baby Soap"
               className="w-full h-45 object-cover rounded-t-lg"
+              style={{height:'500px'}}
             />
             <div className="p-4">
               <h2 className="text-lg font-semibold">Johnson's Baby Soap</h2>
@@ -238,6 +242,7 @@ const BabyCare = () => {
               src={johnsons_baby_wipes}
               alt="Johnson's Baby Wipes"
               className="w-full h-45 object-cover rounded-t-lg"
+              style={{height:'500px'}}
             />
             <div className="p-4">
               <h2 className="text-lg font-semibold">Johnson's Baby Wipes</h2>
@@ -284,6 +289,7 @@ const BabyCare = () => {
               src={vicks_babyrub}
               alt="Vicks BabyRub"
               className="w-full h-45 object-cover rounded-t-lg"
+              style={{height:'500px'}}
             />
             <div className="p-4">
               <h2 className="text-lg font-semibold">Vicks BabyRub</h2>

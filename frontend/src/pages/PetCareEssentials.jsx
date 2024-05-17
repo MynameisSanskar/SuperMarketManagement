@@ -51,6 +51,7 @@ const PetCareEssentials = () => {
               src={calcium_bone_dog_treats}
               alt="Calcium Bone Dog Treats"
               className="w-full h-45 object-cover rounded-t-lg"
+              style={{height:'500px'}}
             />
             <div className="p-4">
               <h2 className="text-lg font-semibold">Calcium Bone Dog Treats</h2>
@@ -100,6 +101,7 @@ const PetCareEssentials = () => {
               src={donut_chew_toy}
               alt="Donut Chew Toy"
               className="w-full h-45 object-cover rounded-t-lg"
+              style={{height:'500px'}}
             />
             <div className="p-4">
               <h2 className="text-lg font-semibold">Donut Chew Toy</h2>
@@ -145,6 +147,7 @@ const PetCareEssentials = () => {
               src={leather_training_leash}
               alt="Leather Training Leash"
               className="w-full h-45 object-cover rounded-t-lg"
+              style={{height:'500px'}}
             />
             <div className="p-4">
               <h2 className="text-lg font-semibold">Leather Training Leash</h2>
@@ -194,6 +197,7 @@ const PetCareEssentials = () => {
               src={nootie_flea_comb}
               alt="Nootie Flea Comb"
               className="w-full h-45 object-cover rounded-t-lg"
+              style={{height:'500px'}}
             />
             <div className="p-4">
               <h2 className="text-lg font-semibold">Nootie Flea Comb</h2>
@@ -243,6 +247,7 @@ const PetCareEssentials = () => {
               src={pedigree_dog_food}
               alt="Pedigree Dog Food"
               className="w-full h-45 object-cover rounded-t-lg"
+              style={{height:'500px'}}
             />
             <div className="p-4">
               <h2 className="text-lg font-semibold">Pedigree Dog Food</h2>
@@ -292,6 +297,7 @@ const PetCareEssentials = () => {
               src={whiskas_cat_food}
               alt="Whiskas Cat Food"
               className="w-full h-45 object-cover rounded-t-lg"
+              style={{height:'500px'}}
             />
             <div className="p-4">
               <h2 className="text-lg font-semibold">Whiskas Cat Food</h2>

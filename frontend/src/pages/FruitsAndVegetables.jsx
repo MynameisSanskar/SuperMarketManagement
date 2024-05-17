@@ -54,6 +54,7 @@ const FruitsAndVegitables = () => {
               src={ladyFinger}
               alt="Lady Finger"
               className="w-full h-45 object-cover rounded-t-lg"
+              style={{height:'500px'}}
             />
             <div className="p-4">
               <h2 className="text-lg font-semibold">Lady Finger</h2>
@@ -94,12 +95,13 @@ const FruitsAndVegitables = () => {
           </div>
         </div>
         {/* Card 2: Litchi */}
-        <div className="w-full sm:w-1/2 lg:w-1/3">
+        <div className="w-full sm:w-1/2 lg:w-1/4">
           <div className="card bg-white rounded-lg overflow-hidden shadow-md">
             <img
               src={litchi}
               alt="Litchi"
               className="w-full h-45 object-cover rounded-t-lg"
+              style={{height:'500px'}}
             />
             <div className="p-4">
               <h2 className="text-lg font-semibold">Litchi</h2>
@@ -139,12 +141,13 @@ const FruitsAndVegitables = () => {
           </div>
         </div>
         {/* Card 3: Cabbage */}
-        <div className="w-full sm:w-1/2 lg:w-1/3">
+        <div className="w-full sm:w-1/2 lg:w-1/4">
           <div className="card bg-white rounded-lg overflow-hidden shadow-md">
             <img
               src={cabbage}
               alt="Cabbage"
               className="w-full h-45 object-cover rounded-t-lg"
+              style={{height:'500px'}}
             />
             <div className="p-4">
               <h2 className="text-lg font-semibold">Cabbage</h2>
@@ -184,12 +187,13 @@ const FruitsAndVegitables = () => {
           </div>
         </div>
         {/* Card 4: Apple */}
-        <div className="w-full sm:w-1/2 lg:w-1/3">
+        <div className="w-full sm:w-1/2 lg:w-1/4">
           <div className="card bg-white rounded-lg overflow-hidden shadow-md">
             <img
               src={apple}
               alt="Apple"
               className="w-full h-45 object-cover rounded-t-lg"
+              style={{height:'500px'}}
             />
             <div className="p-4">
               <h2 className="text-lg font-semibold">Apple</h2>
@@ -235,6 +239,7 @@ const FruitsAndVegitables = () => {
               src={mango}
               alt="Mango"
               className="w-full h-45 object-cover rounded-t-lg"
+              style={{height:'500px'}}
             />
             <div className="p-4">
               <h2 className="text-lg font-semibold">Mango</h2>
@@ -274,12 +279,13 @@ const FruitsAndVegitables = () => {
           </div>
         </div>
         {/* Card 6: Onion */}
-        <div className="w-full sm:w-1/2 lg:w-1/3">
+        <div className="w-full sm:w-1/2 lg:w-1/4">
           <div className="card bg-white rounded-lg overflow-hidden shadow-md justify-center">
             <img
               src={onion}
               alt="Onion"
               className="w-full h-47 object-cover rounded-t-lg"
+              style={{height:'500px'}}
             />
             <div className="p-4">
               <h2 className="text-lg font-semibold">Onion</h2>
