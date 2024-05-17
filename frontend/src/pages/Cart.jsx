@@ -4,57 +4,59 @@ import AddCircleOutlineOutlinedIcon from "@mui/icons-material/AddCircleOutlineOu
 import RemoveCircleOutlineOutlinedIcon from "@mui/icons-material/RemoveCircleOutlineOutlined";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../context/AuthContext";
+import { getDatabase, ref, child, get } from "firebase/database";
+import { database } from "../utils/firebase";
 
-let items = [
-  {
-    name: "abc",
-    color: "white",
-    url: "https://www.theaudiostore.in/cdn/shop/files/QianYunQian99ProWiredEarphones0.webp?v=1701154863",
-    count: 1,
-    price: 250,
-  },
-  {
-    name: "abc",
-    color: "white",
-    url: "https://www.theaudiostore.in/cdn/shop/files/QianYunQian99ProWiredEarphones0.webp?v=1701154863",
-    count: 1,
-    price: 250,
-  },
-  {
-    name: "abc",
-    color: "white",
-    url: "https://www.theaudiostore.in/cdn/shop/files/QianYunQian99ProWiredEarphones0.webp?v=1701154863",
-    count: 1,
-    price: 250,
-  },
-  {
-    name: "abc",
-    color: "white",
-    url: "https://www.theaudiostore.in/cdn/shop/files/QianYunQian99ProWiredEarphones0.webp?v=1701154863",
-    count: 1,
-    price: 250,
-  },
-  {
-    name: "abc",
-    color: "white",
-    url: "https://www.theaudiostore.in/cdn/shop/files/QianYunQian99ProWiredEarphones0.webp?v=1701154863",
-    count: 1,
-    price: 250,
-  },
-];
+function replaceBeforeLastSlash(str, replacement) {
+  if (str) {
+    const lastSlashIndex = str.lastIndexOf("/");
 
+    if (lastSlashIndex === -1) {
+      return str; // No slash found, return the original string
+    }
+
+    const beforeLastSlash = str.substring(0, lastSlashIndex);
+    const afterLastSlash = str.substring(lastSlashIndex);
+
+    return replacement + afterLastSlash;
+  }
+}
 function Cart() {
   const [total, setTotal] = useState(0);
+  const [items, setI] = useState([]);
   const navigate = useNavigate();
-  const { orderItems } = useContext(AuthContext);
+  const { orderItems, removeFromOrder, clearOrder } = useContext(AuthContext);
   console.log(orderItems);
   useEffect(() => {
-    let amt = 0;
-    items.map(({ price, count }) => {
-      amt += price * count;
-    });
-    setTotal(amt);
-  }, []);
+    const getItems = async () => {
+      if (orderItems) {
+        const dbRef = ref(getDatabase());
+        for (let idx in orderItems) {
+          let e = orderItems[idx];
+          get(child(dbRef, `/Categories/${e.category}`))
+            .then((snapshot) => {
+              if (snapshot.exists()) {
+                let val = snapshot.val();
+                for (let key in val) {
+                  if (val[key].id === e.productId) {
+                    val[key]["count"] = e.quantity;
+                    val[key]["category"] = e.category;
+                    setTotal((prevTotal) => prevTotal + val[key]["price"]);
+                    setI((prevItems) => [...prevItems, val[key]]);
+                  }
+                }
+              } else {
+                console.log("No data available");
+              }
+            })
+            .catch((error) => {
+              console.error(error);
+            });
+        }
+      }
+    };
+    getItems();
+  }, [orderItems]);
   return (
     <>
       <div className="flex-row flex justify-between m-7 space-x-3">
@@ -66,7 +68,13 @@ function Cart() {
                 ( {items.length} Products )
               </span>
             </div>
-            <div className="text-red-600  items-center flex-row flex space-x-1 hover:cursor-pointer hover:text-black hover:underline">
+            <div
+              className="text-red-600  items-center flex-row flex space-x-1 hover:cursor-pointer hover:text-black hover:underline"
+              onClick={() => {
+                clearOrder();
+                setI([]);
+              }}
+            >
               <CancelOutlinedIcon />
               <span>clear cart</span>
             </div>
@@ -86,14 +94,14 @@ function Cart() {
                   >
                     <div className="flex flex-row space-x-5 items-center">
                       <img
-                        src={item.url}
+                        src={replaceBeforeLastSlash(item.image, "./")}
                         alt="product_image"
                         className=" size-20  rounded-xl"
                       />
                       <div>
                         <div className=" font-bold">{item.name}</div>
                         <div className=" text-sm text-gray-400">
-                          {item.color}
+                          {item.category}
                         </div>
                       </div>
                     </div>
@@ -104,7 +112,13 @@ function Cart() {
                     </div>
 
                     <div className=" font-bold font-mono">Rs. {item.price}</div>
-                    <CancelOutlinedIcon className=" text-red-500 hover:cursor-pointer hover:text-black" />
+                    <div
+                      onClick={() => {
+                        setI(removeFromOrder(item.category, item.id));
+                      }}
+                    >
+                      <CancelOutlinedIcon className=" text-red-500 hover:cursor-pointer hover:text-black" />
+                    </div>
                   </div>
                 );
               })}
@@ -127,7 +141,7 @@ function Cart() {
             <div className=" flex flex-row text-zinc-500 justify-between">
               Subtotal <span>Rs. {total}</span>
             </div>
-            <div className=" flex flex-row text-zinc-500 justify-between">
+            <div className=" flex flex-row text-red-400 justify-between">
               Discount <span>- Rs. 50</span>
             </div>
             <div className=" flex flex-row font-bold text-lg justify-between ">

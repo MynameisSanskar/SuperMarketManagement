@@ -79,7 +79,11 @@ const BabyCare = () => {
                 <button
                   className="px-4 py-1 bg-green-500 text-white"
                   onClick={() => {
-                    addToOrder("BabyCare", 1, quantities["cerelacBabyFood"]);
+                    addToOrder(
+                      "BabyCare",
+                      "cerelacBabyFood",
+                      quantities["cerelacBabyFood"]
+                    );
                   }}
                 >
                   Add to Cart
@@ -121,7 +125,11 @@ const BabyCare = () => {
                 <button
                   className="px-4 py-1 bg-green-500 text-white"
                   onClick={() => {
-                    addToOrder("BabyCare", 2, quantities["himalayaBabyLotion"]);
+                    addToOrder(
+                      "BabyCare",
+                      "himalayaBabyLotion",
+                      quantities["himalayaBabyLotion"]
+                    );
                   }}
                 >
                   Add to Cart
@@ -165,7 +173,7 @@ const BabyCare = () => {
                   onClick={() => {
                     addToOrder(
                       "BabyCare",
-                      3,
+                      "johnsonsBabyShampoo",
                       quantities["johnsonsBabyShampoo"]
                     );
                   }}
@@ -209,7 +217,11 @@ const BabyCare = () => {
                 <button
                   className="px-4 py-1 bg-green-500 text-white"
                   onClick={() => {
-                    addToOrder("BabyCare", 4, quantities["johnsonsBabySoap"]);
+                    addToOrder(
+                      "BabyCare",
+                      "johnsonsBabySoap",
+                      quantities["johnsonsBabySoap"]
+                    );
                   }}
                 >
                   Add to Cart
@@ -251,7 +263,11 @@ const BabyCare = () => {
                 <button
                   className="px-4 py-1 bg-green-500 text-white"
                   onClick={() => {
-                    addToOrder("BabyCare", 5, quantities["johnsonsBabyWipes"]);
+                    addToOrder(
+                      "BabyCare",
+                      "johnsonsBabyWipes",
+                      quantities["johnsonsBabyWipes"]
+                    );
                   }}
                 >
                   Add to Cart
@@ -293,7 +309,11 @@ const BabyCare = () => {
                 <button
                   className="px-4 py-1 bg-green-500 text-white"
                   onClick={() => {
-                    addToOrder("BabyCare", 6, quantities["vicksBabyRub"]);
+                    addToOrder(
+                      "BabyCare",
+                      "vicksBabyRub",
+                      quantities["vicksBabyRub"]
+                    );
                   }}
                 >
                   Add to Cart

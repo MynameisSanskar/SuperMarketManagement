@@ -40,6 +40,7 @@ export const AuthContextProvider = ({ children }) => {
       (item) => !(item.category === category && item.productId === productId)
     );
     setOrderItems(updatedItems);
+    return updatedItems;
   };
 
   const clearOrder = () => {

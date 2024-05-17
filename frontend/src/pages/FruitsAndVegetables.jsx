@@ -1,7 +1,6 @@
 import React, { useContext, useState } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import { Link } from "react-router-dom";
 import ladyFinger from "../assets/fruits_vegetables/lady_finger.webp";
 import apple from "../assets/fruits_vegetables/apple.webp";
 import cabbage from "../assets/fruits_vegetables/cabbage.webp";
@@ -75,7 +74,7 @@ const FruitsAndVegetables = () => {
                     +
                   </button>
                 </div>
-                <Link
+                <button
                   to="/cart"
                   className="px-4 py-1 bg-green-500 text-white"
                   onClick={() => {
@@ -87,7 +86,7 @@ const FruitsAndVegetables = () => {
                   }}
                 >
                   Add to Cart
-                </Link>
+                </button>
               </div>
             </div>
           </div>

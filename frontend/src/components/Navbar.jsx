@@ -1,6 +1,9 @@
 import React from "react";
+import { FaCartPlus } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
+  const navigate = useNavigate();
   return (
     <div>
       <nav class="bg-white border-gray-200 dark:bg-gray-900">
@@ -16,13 +19,16 @@ const Navbar = () => {
             </span>
           </a>
           <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-            <a
-              href="/cart"
+            <button
+              onClick={() => {
+                navigate("/cart");
+              }}
               class="flex items-center space-x-3 rtl:space-x-reverse"
             >
-              <img src="./cart.svg" class="h-8" alt="logo" />
+              {/* <img src={FaCartPlus} class="h-8" alt="logo" /> */}
+              <FaCartPlus color="yellow" size="30px" />
               {/* <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Bazzarbuddy</span> */}
-            </a>
+            </button>
             <button
               data-collapse-toggle="navbar-cta"
               type="button"

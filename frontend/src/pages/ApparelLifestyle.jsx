@@ -13,37 +13,37 @@ const ApparelLifestyle = () => {
   const { addToOrder } = useContext(AuthContext);
   const products = [
     {
-      id: "1",
+      id: "bag",
       name: "Bag",
       price: 3999,
       image: bag,
     },
     {
-      id: "2",
+      id: "bedsheet",
       name: "Bedsheet",
       price: 5999,
       image: bedsheet,
     },
     {
-      id: "3",
+      id: "handkerchief",
       name: "Handkerchief",
       price: 999,
       image: handkerchief,
     },
     {
-      id: "4",
+      id: "sunglasses_1",
       name: "Sunglasses 1",
       price: 2999,
       image: sunglasses_1,
     },
     {
-      id: "5",
+      id: "t-shirt",
       name: "T-Shirt",
       price: 1999,
       image: t_shirt,
     },
     {
-      id: "6",
+      id: "sunglasses-2",
       name: "Sunglasses 2",
       price: 3499,
       image: sunglasses_2,
