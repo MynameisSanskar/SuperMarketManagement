@@ -50,6 +50,7 @@ const CleaningEssentials = () => {
             <img
               src={godrej_aer_room_freshner}
               alt="Godrej Aer Room Freshener"
+              style={{height:'500px'}}
             />
             <div className="p-4">
               <h2 className="text-lg font-semibold">
@@ -102,6 +103,7 @@ const CleaningEssentials = () => {
               src={ariel_detergent}
               alt="Ariel Detergent"
               className="w-full h-45 object-cover rounded-t-lg"
+              style={{height:'500px'}}
             />
             <div className="p-4">
               <h2 className="text-lg font-semibold">Ariel Detergent</h2>
@@ -151,6 +153,7 @@ const CleaningEssentials = () => {
               src={lizol_floor_cleaner}
               alt="Lizol Floor Cleaner"
               className="w-full h-45 object-cover rounded-t-lg"
+              style={{height:'500px'}}
             />
             <div className="p-4">
               <h2 className="text-lg font-semibold">Lizol Floor Cleaner</h2>
@@ -200,6 +203,7 @@ const CleaningEssentials = () => {
               src={mortein_mosquito_repellent}
               alt="Mortein Mosquito Repellent"
               className="w-full h-45 object-cover rounded-t-lg"
+              style={{height:'500px'}}
             />
             <div className="p-4">
               <h2 className="text-lg font-semibold">
@@ -251,6 +255,7 @@ const CleaningEssentials = () => {
               src={surf_excel}
               alt="Surf Excel"
               className="w-full h-45 object-cover rounded-t-lg"
+              style={{height:'500px'}}
             />
             <div className="p-4">
               <h2 className="text-lg font-semibold">Surf Excel</h2>
@@ -296,6 +301,7 @@ const CleaningEssentials = () => {
               src={vim_dishwash_gel}
               alt="Vim Dishwash Gel"
               className="w-full h-45 object-cover rounded-t-lg"
+              style={{height:'500px'}}
             />
             <div className="p-4">
               <h2 className="text-lg font-semibold">Vim Dishwash Gel</h2>
