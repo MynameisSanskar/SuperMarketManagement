@@ -8,9 +8,11 @@ import litchi from "../assets/fruits_vegetables/litchi.webp";
 import mango from "../assets/fruits_vegetables/mango.webp";
 import onion from "../assets/fruits_vegetables/onion.webp";
 import { AuthContext } from "../context/AuthContext";
+import { useNavigate } from "react-router-dom";
 
 const FruitsAndVegetables = () => {
   const { addToOrder, orderItems } = useContext(AuthContext);
+
   console.log(orderItems);
   const [quantities, setQuantities] = useState({
     "quantity-lady-finger": 0,
@@ -80,7 +82,7 @@ const FruitsAndVegetables = () => {
                   onClick={() => {
                     addToOrder(
                       "FruitsAndVegetables",
-                      1,
+                      "lady-finger",
                       quantities["quantity-lady-finger"]
                     );
                   }}
@@ -125,7 +127,7 @@ const FruitsAndVegetables = () => {
                   onClick={() => {
                     addToOrder(
                       "FruitsAndVegetables",
-                      2,
+                      "litchi",
                       quantities["quantity-litchi"]
                     );
                   }}
@@ -170,7 +172,7 @@ const FruitsAndVegetables = () => {
                   onClick={() => {
                     addToOrder(
                       "FruitsAndVegetables",
-                      3,
+                      "cabbage",
                       quantities["quantity-cabbage"]
                     );
                   }}
@@ -215,7 +217,7 @@ const FruitsAndVegetables = () => {
                   onClick={() => {
                     addToOrder(
                       "FruitsAndVegetables",
-                      4,
+                      "apple",
                       quantities["quantity-apple"]
                     );
                   }}
@@ -260,7 +262,7 @@ const FruitsAndVegetables = () => {
                   onClick={() => {
                     addToOrder(
                       "FruitsAndVegetables",
-                      5,
+                      "mango",
                       quantities["quantity-mango"]
                     );
                   }}
@@ -305,7 +307,7 @@ const FruitsAndVegetables = () => {
                   onClick={() => {
                     addToOrder(
                       "FruitsAndVegetables",
-                      6,
+                      "onion",
                       quantities["quantity-onion"]
                     );
                   }}

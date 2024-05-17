@@ -82,7 +82,7 @@ const PetCareEssentials = () => {
                   onClick={() => {
                     addToOrder(
                       "PetCare",
-                      1,
+                      "calcium-bone-dog-treats",
                       quantities["quantity-calcium-bone-dog-treats"]
                     );
                   }}
@@ -127,7 +127,7 @@ const PetCareEssentials = () => {
                   onClick={() => {
                     addToOrder(
                       "PetCare",
-                      2,
+                      "donut-chew-toy",
                       quantities["quantity-donut-chew-toy"]
                     );
                   }}
@@ -176,7 +176,7 @@ const PetCareEssentials = () => {
                   onClick={() => {
                     addToOrder(
                       "PetCare",
-                      3,
+                      "leather-training-leash",
                       quantities["quantity-leather-training-leash"]
                     );
                   }}
@@ -225,7 +225,7 @@ const PetCareEssentials = () => {
                   onClick={() => {
                     addToOrder(
                       "PetCare",
-                      4,
+                      "nootie-flea-comb",
                       quantities["quantity-nootie-flea-comb"]
                     );
                   }}
@@ -274,7 +274,7 @@ const PetCareEssentials = () => {
                   onClick={() => {
                     addToOrder(
                       "PetCare",
-                      5,
+                      "pedigree-dog-food",
                       quantities["quantity-pedigree-dog-food"]
                     );
                   }}
@@ -323,7 +323,7 @@ const PetCareEssentials = () => {
                   onClick={() => {
                     addToOrder(
                       "PetCare",
-                      6,
+                      "whiskas-cat-food",
                       quantities["quantity-whiskas-cat-food"]
                     );
                   }}

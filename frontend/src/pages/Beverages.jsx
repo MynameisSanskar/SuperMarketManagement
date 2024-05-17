@@ -82,7 +82,7 @@ const Beverages = () => {
                   onClick={() => {
                     addToOrder(
                       "Beverages",
-                      1,
+                      "bisleri-jar",
                       quantities["quantity-bisleri-jar"]
                     );
                   }}
@@ -135,7 +135,7 @@ const Beverages = () => {
                   onClick={() => {
                     addToOrder(
                       "Beverages",
-                      2,
+                      "hershey-milk-shake",
                       quantities["quantity-hershey-milk-shake"]
                     );
                   }}
@@ -188,7 +188,7 @@ const Beverages = () => {
                   onClick={() => {
                     addToOrder(
                       "Beverages",
-                      3,
+                      "raw-mango-drink",
                       quantities["quantity-raw-mango-drink"]
                     );
                   }}
@@ -235,7 +235,7 @@ const Beverages = () => {
                 <button
                   className="px-4 py-1 bg-green-500 text-white"
                   onClick={() => {
-                    addToOrder("Beverages", 4, quantities["quantity-red-bull"]);
+                    addToOrder("Beverages", "red-bull", quantities["quantity-red-bull"]);
                   }}
                 >
                   Add to Cart
@@ -282,7 +282,7 @@ const Beverages = () => {
                   onClick={() => {
                     addToOrder(
                       "Beverages",
-                      5,
+                      "rooh-afza",
                       quantities["quantity-rooh-afza"]
                     );
                   }}
@@ -326,7 +326,7 @@ const Beverages = () => {
                 <button
                   className="px-4 py-1 bg-green-500 text-white"
                   onClick={() => {
-                    addToOrder("Beverages", 6, quantities["quantity-sprite"]);
+                    addToOrder("Beverages", "sprite", quantities["quantity-sprite"]);
                   }}
                 >
                   Add to Cart

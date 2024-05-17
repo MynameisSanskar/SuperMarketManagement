@@ -31,7 +31,7 @@ const ApparelLifestyle = () => {
       image: handkerchief,
     },
     {
-      id: "sunglasses_1",
+      id: "sunglasses-1",
       name: "Sunglasses 1",
       price: 2999,
       image: sunglasses_1,

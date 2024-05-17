@@ -65,7 +65,7 @@ const BabyCare = () => {
                     onClick={() => decrementQuantity("cerelacBabyFood")}
                   >
                     -
-                  </button>
+                  </button>f
                   <span className="px-3 py-1 bg-gray-200">
                     {quantities.cerelacBabyFood}
                   </span>

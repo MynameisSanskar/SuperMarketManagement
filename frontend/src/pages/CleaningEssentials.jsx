@@ -83,7 +83,7 @@ const CleaningEssentials = () => {
                   onClick={() => {
                     addToOrder(
                       "CleaningEssentials",
-                      2,
+                      "godrej-aer-room-freshner",
                       quantities["quantity-godrej-aer-room-freshner"]
                     );
                   }}
@@ -133,7 +133,7 @@ const CleaningEssentials = () => {
                   onClick={() => {
                     addToOrder(
                       "CleaningEssentials",
-                      1,
+                      "ariel-detergent",
                       quantities["quantity-ariel-detergent"]
                     );
                   }}
@@ -182,7 +182,7 @@ const CleaningEssentials = () => {
                   onClick={() => {
                     addToOrder(
                       "CleaningEssentials",
-                      3,
+                      "lizol-floor-cleaner",
                       quantities["quantity-lizol-floor-cleaner"]
                     );
                   }}
@@ -233,7 +233,7 @@ const CleaningEssentials = () => {
                   onClick={() => {
                     addToOrder(
                       "CleaningEssentials",
-                      4,
+                      "mortein-mosquito-repellent",
                       quantities["quantity-mortein-mosquito-repellent"]
                     );
                   }}
@@ -278,7 +278,7 @@ const CleaningEssentials = () => {
                   onClick={() => {
                     addToOrder(
                       "CleaningEssentials",
-                      5,
+                      "surf-excel",
                       quantities["quantity-surf-excel"]
                     );
                   }}
@@ -327,7 +327,7 @@ const CleaningEssentials = () => {
                   onClick={() => {
                     addToOrder(
                       "CleaningEssentials",
-                      6,
+                      "vim-dishwash-gel",
                       quantities["quantity-vim-dishwash-gel"]
                     );
                   }}
