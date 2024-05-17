@@ -14,9 +14,9 @@ export const Map = (props) => {
   const [curr, setcurr] = useState([]);
 
   useEffect(() => {
-    navigator.geolocation.getCurrentPosition((position) => {
-      setcurr(position.coords);
-    });
+    // navigator.geolocation.getCurrentPosition((position) => {
+    //   setcurr(position.coords);
+    // });
 
     console.log(props.loc.coordinates);
     if (props.loc?.coordinates && curr) {
