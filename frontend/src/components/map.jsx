@@ -18,28 +18,31 @@ export const Map = (props) => {
       setcurr(position.coords);
     });
 
-    console.log(props.loc.coordinates && curr);
+    console.log(props.loc.coordinates);
     if (props.loc?.coordinates && curr) {
       const map = new mapboxgl.Map({
         container: "map",
         // style: "mapbox://styles/drakosi/ckvcwq3rwdw4314o3i2ho8tph",
         style: "mapbox://styles/examples/clg45vm7400c501pfubolb0xz",
         center: props.loc.coordinates,
-        zoom: 11,
+        zoom: 8,
       }).fitBounds(
         [
-          [curr.longitude, curr.latitude],
-          [curr.longitude, curr.latitude],
+          // [curr.longitude, curr.latitude],
+          // [curr.longitude, curr.latitude],
+          [props.loc.coordinates[0], props.loc.coordinates[1]],
+          [props.loc.coordinates[0], props.loc.coordinates[1]],
         ],
         {
+          zoom: 18,
           padding: { top: 10, bottom: 25, left: 15, right: 5 },
         }
       );
-      // map.addControl(new mapboxgl.NavigationControl(), "bottom-left");
+      map.addControl(new mapboxgl.NavigationControl(), "bottom-left");
 
-      //   new mapboxgl.Marker()
+      // new mapboxgl.Marker()
       //     // .setLngLat([curr.longitude, curr.latitude])
-      //     .setLngLat([props.coordinates])
+      // .setLngLat([props.loc.coordinates[0], props.loc.coordinates[1]])
       //     //   // .setPopup(
       //     //   //   new mapboxgl.Popup({ offset: 25 }) // add popups
       //     //   //     .setHTML(
@@ -48,7 +51,7 @@ export const Map = (props) => {
       //     //   //       }</p>`
       //     //   //     )
       //     //   // )
-      //     .addTo(map);
+      // .addTo(map);
     }
   }, [props.loc]);
 

@@ -10,7 +10,7 @@ import onion from "../assets/fruits_vegetables/onion.webp";
 import { AuthContext } from "../context/AuthContext";
 import { useNavigate } from "react-router-dom";
 
-const FruitsAndVegetables = () => {
+const FruitsAndVegitables = () => {
   const { addToOrder, orderItems } = useContext(AuthContext);
 
   console.log(orderItems);
@@ -81,7 +81,7 @@ const FruitsAndVegetables = () => {
                   className="px-4 py-1 bg-green-500 text-white"
                   onClick={() => {
                     addToOrder(
-                      "FruitsAndVegetables",
+                      "FruitsAndVegitables",
                       "lady-finger",
                       quantities["quantity-lady-finger"]
                     );
@@ -126,7 +126,7 @@ const FruitsAndVegetables = () => {
                   className="px-4 py-1 bg-green-500 text-white"
                   onClick={() => {
                     addToOrder(
-                      "FruitsAndVegetables",
+                      "FruitsAndVegitables",
                       "litchi",
                       quantities["quantity-litchi"]
                     );
@@ -171,7 +171,7 @@ const FruitsAndVegetables = () => {
                   className="px-4 py-1 bg-green-500 text-white"
                   onClick={() => {
                     addToOrder(
-                      "FruitsAndVegetables",
+                      "FruitsAndVegitables",
                       "cabbage",
                       quantities["quantity-cabbage"]
                     );
@@ -216,7 +216,7 @@ const FruitsAndVegetables = () => {
                   className="px-4 py-1 bg-green-500 text-white"
                   onClick={() => {
                     addToOrder(
-                      "FruitsAndVegetables",
+                      "FruitsAndVegitables",
                       "apple",
                       quantities["quantity-apple"]
                     );
@@ -261,7 +261,7 @@ const FruitsAndVegetables = () => {
                   className="px-4 py-1 bg-green-500 text-white"
                   onClick={() => {
                     addToOrder(
-                      "FruitsAndVegetables",
+                      "FruitsAndVegitables",
                       "mango",
                       quantities["quantity-mango"]
                     );
@@ -306,7 +306,7 @@ const FruitsAndVegetables = () => {
                   className="px-4 py-1 bg-green-500 text-white"
                   onClick={() => {
                     addToOrder(
-                      "FruitsAndVegetables",
+                      "FruitsAndVegitables",
                       "onion",
                       quantities["quantity-onion"]
                     );
@@ -324,4 +324,4 @@ const FruitsAndVegetables = () => {
   );
 };
 
-export default FruitsAndVegetables;
+export default FruitsAndVegitables;

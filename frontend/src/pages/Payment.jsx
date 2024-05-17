@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useNavigate } from "react-router-dom";
+import { AuthContext } from "../context/AuthContext";
 
 function Payment() {
   const navigate = useNavigate();
+  const { tot } = useContext(AuthContext);
+  console.log(tot);
 
   return (
     <>
@@ -99,12 +102,14 @@ function Payment() {
         <div className="flex flex-col space-y-3 bg-zinc-300 h-fit p-5 rounded-xl w-1/2">
           <div className="flex flex-row justify-between">
             <p className=" font-bold text-2xl ">Total</p>
-            <span className=" font-bold text-2xl text-green-600">Rs. 1200</span>
+            <span className=" font-bold text-2xl text-green-600">
+              Rs. {tot.cost - 50}
+            </span>
           </div>
           <hr className=" border-black" />
           <div className="flex flex-row justify-between">
             <p className=" font-bold text-lg">Items</p>
-            <span className=" font-bold text-lg">5</span>
+            <span className=" font-bold text-lg">{tot.count}</span>
           </div>
           <div className="flex flex-row justify-between">
             <p className=" font-bold text-lg">Discount</p>

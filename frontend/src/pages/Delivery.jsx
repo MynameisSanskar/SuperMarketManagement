@@ -34,19 +34,18 @@ function Delivery() {
   };
 
   useEffect(() => {
-    getPickupCoordinates("Panvel");
+    getPickupCoordinates("Vjti");
   }, []);
   return (
     <>
-      <div>Hello world</div>
       {/* <div className="m-3"> */}
       <Map loc={loc} />
       {/* </div> */}
       <div className=" text-2xl text-red-500 font-bold m-10">
-        Your ORDER Is HERE
+        Your ORDER IS ON THE WAY
       </div>
-      <div>
-        <img src={FaPhone} alt="phone" />
+      <div className="flex flex-row">
+        <FaPhone />
         Call us
       </div>
     </>

@@ -25,7 +25,8 @@ function Cart() {
   const [total, setTotal] = useState(0);
   const [items, setI] = useState([]);
   const navigate = useNavigate();
-  const { orderItems, removeFromOrder, clearOrder } = useContext(AuthContext);
+  const { orderItems, removeFromOrder, clearOrder, setTot } =
+    useContext(AuthContext);
   console.log(orderItems);
   useEffect(() => {
     const getItems = async () => {
@@ -41,7 +42,10 @@ function Cart() {
                   if (val[key].id === e.productId) {
                     val[key]["count"] = e.quantity;
                     val[key]["category"] = e.category;
-                    setTotal((prevTotal) => prevTotal + val[key]["price"]);
+                    setTotal(
+                      (prevTotal) =>
+                        prevTotal + val[key]["count"] * val[key]["price"]
+                    );
                     setI((prevItems) => [...prevItems, val[key]]);
                   }
                 }
@@ -73,6 +77,7 @@ function Cart() {
               onClick={() => {
                 clearOrder();
                 setI([]);
+                setTotal(0);
               }}
             >
               <CancelOutlinedIcon />
@@ -114,7 +119,10 @@ function Cart() {
                     <div className=" font-bold font-mono">Rs. {item.price}</div>
                     <div
                       onClick={() => {
-                        setI(removeFromOrder(item.category, item.id));
+                        // setI(removeFromOrder(item.category, item.id));
+                        setTotal(0);
+                        removeFromOrder(item.category, item.id);
+                        setI([]);
                       }}
                     >
                       <CancelOutlinedIcon className=" text-red-500 hover:cursor-pointer hover:text-black" />
@@ -150,6 +158,9 @@ function Cart() {
           </div>
           <div
             onClick={() => {
+              setTot(
+                total > 0 ? { count: 5, cost: total } : { count: 0, cost: 0 }
+              );
               navigate("/payment");
             }}
             className=" w-full rounded-full  bg-emerald-400 text-center font-bold  hover:cursor-pointer hover:bg-green-400 p-3 "

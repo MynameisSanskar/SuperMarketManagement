@@ -18,6 +18,7 @@ export const AuthContextProvider = ({ children }) => {
     user: null,
   });
   const [orderItems, setOrderItems] = useState([]);
+  const [tot, setTot] = useState({ count: 0, cost: 0 });
 
   const addToOrder = (category, productId, quantity) => {
     const existingItem = orderItems.find(
@@ -67,6 +68,8 @@ export const AuthContextProvider = ({ children }) => {
         clearOrder,
         orderItems,
         setOrderItems,
+        tot,
+        setTot,
       }}
     >
       {children}
